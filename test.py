@@ -74,8 +74,8 @@ uploaded_file = st.sidebar.file_uploader(
 )
 
 st.sidebar.header("🗓️ Batch Calendar Start")
-batch_date = st.sidebar.date_input("Start Date", datetime(2026, 6, 13).date())
-batch_time = st.sidebar.time_input("Start Time", datetime(2026, 6, 13, 7, 22).time())
+batch_date = st.sidebar.date_input("Start Date", value=now.date())
+batch_time = st.sidebar.time_input("Start Time", value=now.time())
 batch_start_dt = datetime.combine(batch_date, batch_time)
 
 enforce_now = st.sidebar.checkbox(
