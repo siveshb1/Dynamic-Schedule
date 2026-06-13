@@ -22,47 +22,47 @@ st.markdown("""
 # Fallback hardcoded recipe
 # =============================================================================
 DEFAULT_RECIPE = [
-    [1,  "LC_PPM",                 1.0,  [],               [],                       0,   []],
-    [2,  "PPM_Disp",               2.0,  [1],              [],                       0,   []],
-    [3,  "LC_RM",                  2.0,  [],               [],                       0,   []],
-    [4,  "RM_Disp",                5.0,  [3],              [],                       0,   []],
-    [5,  "FV01_CIP",               6.0,  [],               ["CIP01","FV03"],         0,   []],
-    [6,  "TV51_CIP",               6.0,  [],               ["CIP01"],                0,   []],
-    [7,  "FV03_CIP",               6.0,  [],               ["CIP01","FV03"],         0,   []],
-    [8,  "TV51_PreFIT",            0.75, [2],              ["ITM55"],                0,   []],
-    [9,  "TV51_PHTC",              1.0,  [6,8],            ["ITMSKID"],              24,  [6,8]],
-    [10, "TV51_SIP",               7.0,  [9],              ["Facility_temp"],        0,   []],
-    [11, "TV51_PHTS",              1.0,  [10],             ["ITMSKID"],              0,   []],
-    [12, "FV01_PreFIT",            1.5,  [2],              ["ITM55"],                0,   []],
-    [13, "FV01_PHTC",              1.0,  [5,12,29,30],     ["ITMSKID","FV03"],       24,  [5,12,29,30]],
-    [14, "FV01_SIP",               7.0,  [13],             ["Facility_temp","FV03"], 0,   []],
-    [15, "FV01_PHTS",              1.0,  [14],             ["ITMSKID","FV03"],       0,   []],
-    [16, "FV03_PreFIT",            0.75, [2],              ["ITM55"],                0,   []],
-    [17, "FV03_PHTC",              1.0,  [7,16],           ["FV03"],                 24,  [7,16]],
-    [18, "FV03_SIP",               6.0,  [17],             ["Facility_temp","FV03"], 0,   []],
-    [19, "FV03_PHTS",              1.0,  [18],             ["FV03"],                 0,   []],
-    [20, "MV60_CIP",               1.5,  [],               ["CIP01","CIP09"],        0,   []],
-    [21, "MV60_PreFIT",            0.5,  [2],              ["ITM55"],                0,   []],
-    [22, "MV60_SIP",               3.0,  [20,21],          ["CIP09"],                24,  [20,21]],
-    [23, "MV61_CIP",               1.5,  [],               ["CIP01","CIP09"],        0,   []],
-    [24, "MV61_PreFIT",            0.5,  [2],              ["ITM55"],                0,   []],
-    [25, "MV61_SIP",               3.0,  [23,24],          ["CIP09"],                24,  [25]],
-    [26, "MV56_CIP",               1.5,  [],               ["CIP01","CIP09"],        0,   []],
-    [27, "MV56_PreFIT",            0.5,  [2],              ["ITM55"],                0,   []],
-    [28, "MV56_SIP",               3.0,  [26,27],          ["CIP09"],                24,  [28]],
-    [29, "ITM51_PreFIT_EMFLON5",   1.0,  [2],              ["ITM55"],                0,   []],
-    [30, "ITM51_PreFIT_Milidisk",  1.0,  [2],              ["ITM55"],                0,   []],
-    [31, "PlateExp",               0.5,  [37],             [],                       0,   []],
-    [32, "WaterColl_FV01",         1.0,  [15],             [],                       72,  [15]],
-    [33, "WaterColl_FV03",         1.0,  [19],             [],                       72,  [19]],
-    [34, "WaterColl_FV60",         1.0,  [22],             ["UP52"],                 24,  [22]],
-    [35, "WaterColl_FV61",         1.0,  [25],             ["UP52"],                 24,  [25]],
-    [36, "WaterColl_FV56",         1.0,  [28],             ["UP52"],                 24,  [28]],
-    [37, "Durapore PreFIT",        1.0,  [2,15,19],        ["ITM55"],                0,   []],
+    [1,  "LC_PPM",                 1.0,  [],                [],                        0,   []],
+    [2,  "PPM_Disp",               2.0,  [1],               [],                        0,   []],
+    [3,  "LC_RM",                  2.0,  [],                [],                        0,   []],
+    [4,  "RM_Disp",                5.0,  [3],               [],                        0,   []],
+    [5,  "FV01_CIP",               6.0,  [],                ["CIP01","FV03"],          0,   []],
+    [6,  "TV51_CIP",               6.0,  [],                ["CIP01"],                 0,   []],
+    [7,  "FV03_CIP",               6.0,  [],                ["CIP01","FV03"],          0,   []],
+    [8,  "TV51_PreFIT",            0.75, [2],               ["ITM55"],                 0,   []],
+    [9,  "TV51_PHTC",              1.0,  [6,8],             ["ITMSKID"],               24,  [6,8]],
+    [10, "TV51_SIP",               7.0,  [9],               ["Facility_temp"],         0,   []],
+    [11, "TV51_PHTS",              1.0,  [10],              ["ITMSKID"],               0,   []],
+    [12, "FV01_PreFIT",            1.5,  [2],               ["ITM55"],                 0,   []],
+    [13, "FV01_PHTC",              1.0,  [5,12,29,30],      ["ITMSKID","FV03"],        24,  [5,12,29,30]],
+    [14, "FV01_SIP",               7.0,  [13],              ["Facility_temp","FV03"],  0,   []],
+    [15, "FV01_PHTS",              1.0,  [14],              ["ITMSKID","FV03"],        0,   []],
+    [16, "FV03_PreFIT",            0.75, [2],               ["ITM55"],                 0,   []],
+    [17, "FV03_PHTC",              1.0,  [7,16],            ["FV03"],                  24,  [7,16]],
+    [18, "FV03_SIP",               6.0,  [17],              ["Facility_temp","FV03"],  0,   []],
+    [19, "FV03_PHTS",              1.0,  [18],              ["FV03"],                  0,   []],
+    [20, "MV60_CIP",               1.5,  [],                ["CIP01","CIP09"],         0,   []],
+    [21, "MV60_PreFIT",            0.5,  [2],               ["ITM55"],                 0,   []],
+    [22, "MV60_SIP",               3.0,  [20,21],           ["CIP09"],                 24,  [20,21]],
+    [23, "MV61_CIP",               1.5,  [],                ["CIP01","CIP09"],         0,   []],
+    [24, "MV61_PreFIT",            0.5,  [2],               ["ITM55"],                 0,   []],
+    [25, "MV61_SIP",               3.0,  [23,24],           ["CIP09"],                 24,  [25]],
+    [26, "MV56_CIP",               1.5,  [],                ["CIP01","CIP09"],         0,   []],
+    [27, "MV56_PreFIT",            0.5,  [2],               ["ITM55"],                 0,   []],
+    [28, "MV56_SIP",               3.0,  [26,27],           ["CIP09"],                 24,  [28]],
+    [29, "ITM51_PreFIT_EMFLON5",   1.0,  [2],               ["ITM55"],                 0,   []],
+    [30, "ITM51_PreFIT_Milidisk",  1.0,  [2],               ["ITM55"],                 0,   []],
+    [31, "PlateExp",               0.5,  [37],              [],                        0,   []],
+    [32, "WaterColl_FV01",         1.0,  [15],              [],                        72,  [15]],
+    [33, "WaterColl_FV03",         1.0,  [19],              [],                        72,  [19]],
+    [34, "WaterColl_FV60",         1.0,  [22],              ["UP52"],                  24,  [22]],
+    [35, "WaterColl_FV61",         1.0,  [25],              ["UP52"],                  24,  [25]],
+    [36, "WaterColl_FV56",         1.0,  [28],              ["UP52"],                  24,  [28]],
+    [37, "Durapore PreFIT",        1.0,  [2,15,19],         ["ITM55"],                 0,   []],
     [38, "DocVerify",              3.0,  [11,15,19,22,25,28,37], [],                 0,   []],
-    [39, "Formulation",           10.0,  [4,31,32,33,34,35,36,38], [],              0,   []],
-    [40, "Filtration",             3.0,  [39],             [],                       72,  [11]],
-    [41, "Postfit Durapore",       2.0,  [40],             ["ITM55"],                0,   []],
+    [39, "Formulation",           10.0,  [4,31,32,33,34,35,36,38], [],                 0,   []],
+    [40, "Filtration",             3.0,  [39],              [],                        72,  [11]],
+    [41, "Postfit Durapore",       2.0,  [40],              ["ITM55"],                 0,   []],
 ]
 
 # =============================================================================
@@ -76,12 +76,11 @@ uploaded_file = st.sidebar.file_uploader(
 
 st.sidebar.header("🗓️ Batch Calendar Start")
 
-# 1. Initialize 'now' locked to your specific timezone
+# Initialize 'now' locked to your specific timezone
 if 'now' not in st.session_state:
-    # This forces Python to fetch the exact time in your timezone, regardless of where the server is
     st.session_state.now = datetime.now(ZoneInfo("Asia/Kuala_Lumpur"))
 
-# 2. Use the session state value for your inputs
+# Use the session state value for inputs
 batch_date = st.sidebar.date_input("Start Date", value=st.session_state.now.date())
 batch_time = st.sidebar.time_input("Start Time", value=st.session_state.now.time())
 batch_start_dt = datetime.combine(batch_date, batch_time)
@@ -143,19 +142,6 @@ def _to_datetime(val):
 # Excel Parser
 # =============================================================================
 def parse_excel_template(df: pd.DataFrame, batch_start_dt: datetime):
-    """
-    Returns
-    -------
-    recipe    : list[tag, name, duration, deps, resources, lag_w, lag_deps]
-    overrides : dict  tag -> {Start(Hr), End(Hr), Lock?, Started}
-    errors    : list[str]  non-fatal warnings
-
-    Override states
-    ───────────────
-    Lock=TRUE + Start + End  →  completed & pinned   (Lock?=True,  Started=True)
-    Start only, no Lock      →  in-progress           (Lock?=False, Started=True)
-    Nothing                  →  pending               (not in overrides)
-    """
     recipe, overrides, errors = [], {}, []
     df.columns = [str(c).strip() for c in df.columns]
 
@@ -174,9 +160,9 @@ def parse_excel_template(df: pd.DataFrame, batch_start_dt: datetime):
             errors.append(f"Row {excel_row}: skipped — {exc}")
             continue
 
-        deps     = _parse_int_list(row.get("Dependencies"))
-        resources= _parse_str_list(row.get("Resources"))
-        lag_w    = 0.0
+        deps      = _parse_int_list(row.get("Dependencies"))
+        resources = _parse_str_list(row.get("Resources"))
+        lag_w     = 0.0
         try:
             raw_lag = row.get("Lag Window (Hr)")
             if raw_lag is not None and not (isinstance(raw_lag, float) and pd.isna(raw_lag)):
@@ -193,7 +179,6 @@ def parse_excel_template(df: pd.DataFrame, batch_start_dt: datetime):
         e_dt = _to_datetime(row.get("End Override"))
 
         if is_locked and s_dt and e_dt:
-            # Fully completed and pinned
             try:
                 s_hr = (s_dt - batch_start_dt).total_seconds() / 3600.0
                 e_hr = (e_dt - batch_start_dt).total_seconds() / 3600.0
@@ -209,7 +194,6 @@ def parse_excel_template(df: pd.DataFrame, batch_start_dt: datetime):
                     f"— treated as unlocked."
                 )
         elif s_dt and not is_locked:
-            # Task started but not yet completed — lag constraint is consumed
             try:
                 s_hr = (s_dt - batch_start_dt).total_seconds() / 3600.0
                 if math.isfinite(s_hr):
@@ -231,60 +215,41 @@ def parse_excel_template(df: pd.DataFrame, batch_start_dt: datetime):
 # Lag Window Analyser
 # =============================================================================
 def analyse_lag(recipe, overrides, batch_start_dt):
-    """
-    For every task with a lag window that has NOT yet started:
-      - Identify which of its lag-deps are completed (locked with end time)
-      - Check if dep_end is still within lag_w hours BEFORE now
-        i.e.  now - lag_w  <=  dep_end  <=  now
-        If dep_end < now - lag_w  →  dep is EXPIRED (too old), must be repeated
-        If dep_end is within window →  still valid, normal constraint applies
-
-    Returns
-    -------
-    repeat_tags : set of original tag IDs whose completed run is expired
-                  → these must be treated as unlocked (repeated) in the solver
-    warnings    : list of (task_tag, task_name, dep_tag, dep_name, dep_end_abs, window_close_abs)
-                  for UI display
-    """
-    # Build lookups
-    tag_info    = {t[0]: t for t in recipe}   # tag -> full recipe row
-    completed   = {                            # tag -> end_hr  (locked tasks with end time)
+    tag_info    = {t[0]: t for t in recipe}   
+    completed   = {                            
         t[0]: overrides[t[0]]["End (Hr)"]
         for t in recipe
         if t[0] in overrides
         and overrides[t[0]].get("Lock?")
         and overrides[t[0]].get("End (Hr)") is not None
     }
-    started     = {                            # tags whose lag is consumed
+    started     = {                            
         t[0] for t in recipe
         if t[0] in overrides and overrides[t[0]].get("Started")
     }
 
-    now_hr = (datetime.now(ZoneInfo("Asia/Kuala_Lumpur")) - batch_start_dt).total_seconds() / 3600.0
+    # FIX: Make current time naive to match batch_start_dt
+    now_kl = datetime.now(ZoneInfo("Asia/Kuala_Lumpur")).replace(tzinfo=None)
+    now_hr = (now_kl - batch_start_dt).total_seconds() / 3600.0
 
-    repeat_tags = set()   # dep tags that need to be repeated
+    repeat_tags = set()   
     warnings    = []
 
     for t in recipe:
         tag, name, _, _, _, lag_w, lag_deps = t
         if lag_w <= 0 or not lag_deps:
             continue
-        # Rule 1: task already started → lag consumed, skip
         if tag in started:
             continue
 
         for ld in lag_deps:
             if ld not in completed:
-                continue   # dep not done → solver handles the window normally
+                continue   
 
             dep_end_hr   = completed[ld]
-            # Valid window: dep must have ended no earlier than (now - lag_w)
-            # i.e. dep_end >= now - lag_w  →  dep is still fresh
-            # i.e. dep_end <  now - lag_w  →  dep is EXPIRED, needs repeat
             earliest_valid_dep_end = now_hr - lag_w
 
             if dep_end_hr < earliest_valid_dep_end:
-                # Expired — dep must be repeated
                 repeat_tags.add(ld)
                 dep_name      = tag_info[ld][1] if ld in tag_info else str(ld)
                 dep_end_abs   = batch_start_dt + timedelta(hours=dep_end_hr)
@@ -306,12 +271,6 @@ def analyse_lag(recipe, overrides, batch_start_dt):
 # =============================================================================
 def solve_schedule(recipe, batch_start_dt, overrides=None,
                    enforce_now_flag=True, repeat_tags=None):
-    """
-    repeat_tags : set of tag IDs whose locked override should be IGNORED
-                  (treated as unlocked / to be repeated).
-                  The solver will re-schedule them freely so the lag window
-                  of their dependent task is satisfied.
-    """
     if overrides    is None: overrides    = {}
     if repeat_tags  is None: repeat_tags  = set()
 
@@ -321,13 +280,14 @@ def solve_schedule(recipe, batch_start_dt, overrides=None,
 
     task_starts, task_ends, task_intervals, resource_ivs = {}, {}, {}, {}
 
-    current_hr     = (datetime.now(ZoneInfo("Asia/Kuala_Lumpur")) - batch_start_dt).total_seconds() / 3600.0
+    # FIX: Make current time naive to match batch_start_dt
+    now_kl = datetime.now(ZoneInfo("Asia/Kuala_Lumpur")).replace(tzinfo=None)
+    current_hr     = (now_kl - batch_start_dt).total_seconds() / 3600.0
     current_scaled = max(0, int(current_hr * SCALE))
 
     for t in recipe:
         tag, _, duration, _, resources, _, _ = t
 
-        # Pin task only if locked AND not flagged for repeat
         if tag in overrides and overrides[tag].get("Lock?") and tag not in repeat_tags:
             raw_s = overrides[tag]["Start (Hr)"]
             raw_e = overrides[tag]["End (Hr)"]
@@ -342,7 +302,6 @@ def solve_schedule(recipe, batch_start_dt, overrides=None,
             start_v = model.NewConstant(s_val)
             end_v   = model.NewConstant(e_val)
         else:
-            # Free variable — solver places it optimally
             dur_val = int(duration * SCALE)
             start_v = model.NewIntVar(0, horizon, f"s_{tag}")
             end_v   = model.NewIntVar(0, horizon, f"e_{tag}")
@@ -357,7 +316,6 @@ def solve_schedule(recipe, batch_start_dt, overrides=None,
         for res in resources:
             resource_ivs.setdefault(res, []).append(interval)
 
-    # ── Precedence & lag constraints ─────────────────────────────────────────
     for t in recipe:
         tag, _, _, deps, _, lag_w, lag_deps = t
 
@@ -368,15 +326,12 @@ def solve_schedule(recipe, batch_start_dt, overrides=None,
         if lag_w > 0:
             for ld in lag_deps:
                 if ld in task_ends:
-                    # Upper bound: task must start within lag_w of dep ending
                     model.Add(task_starts[tag] <= task_ends[ld] + int(lag_w * SCALE))
 
-    # ── No-overlap on shared resources ───────────────────────────────────────
     for res, ivs in resource_ivs.items():
         if len(ivs) > 1:
             model.AddNoOverlap(ivs)
 
-    # ── Minimise makespan ────────────────────────────────────────────────────
     makespan = model.NewIntVar(0, horizon, "makespan")
     model.AddMaxEquality(makespan, list(task_ends.values()))
     model.Minimize(makespan)
@@ -423,11 +378,8 @@ else:
 reset_clicked = st.sidebar.button("♻️ Apply Start Time / Reset")
 
 if state_key not in st.session_state or reset_clicked:
-
-    # Analyse lag violations before solving
     repeat_tags, lag_warnings = analyse_lag(base_recipe, sheet_overrides, batch_start_dt)
 
-    # Show warnings
     if lag_warnings:
         tag_lookup = {t[0]: t[1] for t in base_recipe}
         for w in lag_warnings:
@@ -513,10 +465,9 @@ if reoptimise:
             "Start (Hr)": s_hr,
             "End (Hr)":   e_hr,
             "Lock?":      bool(row["Lock?"]),
-            "Started":    bool(row["Lock?"]),  # locked = completed = started
+            "Started":    bool(row["Lock?"]),  
         }
 
-    # Re-analyse lag with current UI overrides
     repeat_tags, lag_warnings = analyse_lag(base_recipe, overrides_from_ui, batch_start_dt)
 
     if lag_warnings:
@@ -567,7 +518,6 @@ for _, row in current_df.iterrows():
     is_repeat = bool(row.get("Repeat", False))
     is_locked = bool(row["Lock?"])
     res       = tag_to_resources.get(tag, [])
-
 
     if is_repeat:
         status = "Repeat 🔄"
