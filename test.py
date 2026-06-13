@@ -4,6 +4,7 @@ import plotly.express as px
 from ortools.sat.python import cp_model
 from datetime import datetime, timedelta
 import math
+from zoneinfo import ZoneInfo
 
 # =============================================================================
 # Page Config
@@ -74,14 +75,15 @@ uploaded_file = st.sidebar.file_uploader(
 )
 
 st.sidebar.header("🗓️ Batch Calendar Start")
-# 1. Initialize 'now' in session state using just datetime.now()
-if 'now' not in st.session_state:
-    st.session_state.now = datetime.now()
 
-# 2. Use the saved session state value for your inputs
+# 1. Initialize 'now' locked to your specific timezone
+if 'now' not in st.session_state:
+    # This forces Python to fetch the exact time in your timezone, regardless of where the server is
+    st.session_state.now = datetime.now(ZoneInfo("Asia/Kuala_Lumpur"))
+
+# 2. Use the session state value for your inputs
 batch_date = st.sidebar.date_input("Start Date", value=st.session_state.now.date())
 batch_time = st.sidebar.time_input("Start Time", value=st.session_state.now.time())
-
 batch_start_dt = datetime.combine(batch_date, batch_time)
 
 enforce_now = st.sidebar.checkbox(
