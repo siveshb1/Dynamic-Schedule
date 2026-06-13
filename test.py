@@ -260,7 +260,7 @@ def analyse_lag(recipe, overrides, batch_start_dt):
         if t[0] in overrides and overrides[t[0]].get("Started")
     }
 
-    now_hr = (datetime.now() - batch_start_dt).total_seconds() / 3600.0
+    now_hr = (datetime.now(ZoneInfo("Asia/Kuala_Lumpur")) - batch_start_dt).total_seconds() / 3600.0
 
     repeat_tags = set()   # dep tags that need to be repeated
     warnings    = []
@@ -321,7 +321,7 @@ def solve_schedule(recipe, batch_start_dt, overrides=None,
 
     task_starts, task_ends, task_intervals, resource_ivs = {}, {}, {}, {}
 
-    current_hr     = (datetime.now() - batch_start_dt).total_seconds() / 3600.0
+    current_hr     = (datetime.now(ZoneInfo("Asia/Kuala_Lumpur")) - batch_start_dt).total_seconds() / 3600.0
     current_scaled = max(0, int(current_hr * SCALE))
 
     for t in recipe:
@@ -597,7 +597,7 @@ fig = px.timeline(
 )
 fig.update_yaxes(autorange="reversed")
 
-now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+now_str = datetime.now(ZoneInfo("Asia/Kuala_Lumpur")).strftime("%Y-%m-%d %H:%M:%S")
 fig.add_shape(
     type="line",
     x0=now_str, x1=now_str, y0=0, y1=1,
